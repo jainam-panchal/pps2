@@ -27,20 +27,20 @@ public:
     }
     
 	void getData(){
-	cout<<"Enter Product Code: ";
-	cin>>code;
-	cout<<"Enter Cost: ";
-	cin>>cost;
-	cout<<"Enter Quantity: ";
-	cin>>qty;
-	cout<<"Product has been Registerd..!!"<<endl<<endl;
+		cout<<"Enter Product Code: ";
+		cin>>code;
+		cout<<"Enter Cost: ";
+		cin>>cost;
+		cout<<"Enter Quantity: ";
+		cin>>qty;
+		cout<<"Product has been Registerd..!!"<<endl<<endl;
 	}
 	
 	void dispData(){
-	cout<<"Product Code  : "<<code<<endl;
-	cout<<"Cost          : "<<cost<<" Rs"<<endl;
-	cout<<"Available Qty : "<<qty<<endl;
-	cout<<"Total Price   : "<<total_price<<" Rs"<<endl<<endl; 	
+		cout<<"Product Code  : "<<code<<endl;
+		cout<<"Cost          : "<<cost<<" Rs"<<endl;
+		cout<<"Available Qty : "<<qty<<endl;
+		cout<<"Total Price   : "<<total_price<<" Rs"<<endl<<endl; 	
 	}
 	
 	void calcPrice(){
