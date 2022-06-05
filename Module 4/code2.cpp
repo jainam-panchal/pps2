@@ -3,7 +3,7 @@ Date: 23/05/22
 Module 4, Program 2
 */
 
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
 class data{
@@ -14,6 +14,18 @@ private:
 	float total_price;
 		
 public:
+    
+    data(){
+        strcpy(code,"");
+        cost = 0.0;
+        qty = 0;
+        total_price = 0;
+    }
+    
+    ~data(){
+        cout << "Obj Destroyed..\n";
+    }
+    
 	void getData(){
 	cout<<"Enter Product Code: ";
 	cin>>code;
@@ -44,6 +56,7 @@ int main(){
 	p1.calcPrice();
 	p1.dispData();
 	
+	
+	cout << "\n\n";
 	return 0;
 }
-
