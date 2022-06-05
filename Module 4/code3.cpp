@@ -5,7 +5,6 @@ Module 4, Program 3
 
 
 #include  <bits/stdc++.h>
-#include <string>
 using namespace std;
 
 class book{
@@ -17,24 +16,37 @@ private:
 	float total_price;
 	
 public:
+    
+    book(){
+        bname = "";
+        aname = "";
+        qty = 0;
+        rate = 0.0;
+        total_price = 0.0;
+    }
+    
+    ~book(){
+        cout << "Object Destroyed..\n";
+    }
+    
 	void getData(){
-	cout<<"Enter Book name: ";
-	getline(std::cin,bname);
-	cout<<"Enter Author name: ";
-	getline(std::cin,aname);
-	cout<<"Enter Qty: ";
-	cin>>qty;
-	cout<<"Enter Rate: ";
-	cin>>rate;
-	cout<<"Book has been added..!!"<<endl<<endl;
+		cout<<"Enter Book name: ";
+		getline(std::cin,bname);
+		cout<<"Enter Author name: ";
+		getline(std::cin,aname);
+    		cout<<"Enter Qty: ";
+		cin>>qty;
+		cout<<"Enter Rate: ";
+		cin>>rate;
+		cout<<"Book has been added..!!"<<endl<<endl;
 	}
 	
 	void dispData(){
-	cout<<"Book Name 	 : "<<bname<<endl;
-	cout<<"Author Name 	 : "<<aname<<endl;
-	cout<<"Available Qty 	 : "<<qty<<endl;
-	cout<<"Rate 		 : "<<rate<<" Rs"<<endl;
-	cout<<"Total Price	 : "<<total_price<<" Rs"<<endl;
+		cout<<"Book Name 	 : "<<bname<<endl;
+		cout<<"Author Name 	 : "<<aname<<endl;
+    		cout<<"Available Qty 	 : "<<qty<<endl;
+    		cout<<"Rate 		 : "<<rate<<" Rs"<<endl;
+    		cout<<"Total Price	 : "<<total_price<<" Rs"<<endl;
 	}
 	
 	void calcTotalPrice(){
