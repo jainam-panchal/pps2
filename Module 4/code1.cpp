@@ -4,7 +4,7 @@ Module 4, Program 1
 */
 
 
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 class player{
@@ -13,6 +13,17 @@ private:
 	int age,runs,hi,lo,tests,avg;
 
 public:
+
+    player(){
+        strcpy(name,"");
+        age = 0;
+        runs = 0;
+        hi = 0;
+        lo = 0;
+        tests = 0;
+        avg = 0;
+    }
+
 	void getData(){
 		cout<<"Enter Player Name: ";
 		cin>>name;
@@ -43,6 +54,10 @@ public:
 	void calcAvg(){
 		avg = runs / float(tests);
 	}
+	
+	~player(){
+	    cout << "Obj Destroyed..\n";
+	}
 };
 
 
@@ -52,5 +67,6 @@ int main(){
 	p1.calcAvg();
 	p1.dispData();
 	
+	cout << "\n\n";
 	return 0;
 }
