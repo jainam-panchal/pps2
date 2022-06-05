@@ -9,6 +9,20 @@ private:
 	char cls[40];
 
 public:
+    
+    student(){
+        name = "";
+        for(int i=0;i<6;++i){
+            marks[i] = 0;
+        }
+        per = 0.0;
+        strcpy(cls,"");
+    }
+    
+    ~student(){
+        cout << "Object Destroyed..\n";
+    }
+    
 	void getData(){
 		cout<<"Enter Student Name: ";
 		cin>>name;
@@ -70,5 +84,7 @@ int main(){
 	for(int j=0;j<n;j++){
 		s[j].dispData();
 	}
+	
+	cout << "\n\n";
 	return 0;
 }
