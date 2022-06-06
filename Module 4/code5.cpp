@@ -85,6 +85,6 @@ int main(){
 		s[j].dispData();
 	}
 	
-	cout << "\n\n";
+	cout << "\n";
 	return 0;
 }
