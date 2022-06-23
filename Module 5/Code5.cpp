@@ -35,7 +35,7 @@ public:
              << endl;
     }
 
-    complex operator+(complex const &obj)
+    complex plus (complex const &obj)
     {
         complex temp;
         temp.real = real + obj.real;
@@ -43,7 +43,7 @@ public:
         return temp;
     }
 
-    complex operator-(complex const &obj)
+    complex minus (complex const &obj)
     {
         complex temp;
         temp.real = real - obj.real;
@@ -51,7 +51,7 @@ public:
         return temp;
     }
 
-    complex operator*(complex const &obj)
+    complex multiply (complex const &obj)
     {
         complex temp;
         temp.real = ((real * obj.real) - (img * obj.img));
@@ -59,7 +59,7 @@ public:
         return temp;
     }
 
-    complex operator/(complex const &obj)
+    complex div (complex const &obj)
     {
         complex temp;
         temp.real = ((real * (obj.real)) + (img * (obj.img))) / (pow(obj.real, 2) + pow(obj.img, 2));
@@ -84,22 +84,22 @@ int main()
     switch (choice)
     {
     case 1:
-        c3 = c1 + c2;
+        c3 = c1.plus(c2);
         cout << "\nAfter Addition\n";
         c3.putData();
         break;
     case 2:
-        c3 = c1 - c2;
+        c3 = c1.minus(c2);
         cout << "\nAfter Subtraction\n";
         c3.putData();
         break;
     case 3:
-        c3 = c1 * c2;
+        c3 = c1.multiply(c2);
         cout << "\nAfter Subtraction\n";
         c3.putData();
         break;
     case 4:
-        c3 = c1 / c2;
+        c3 = c1.div(c2);
         cout << "\nAfter Division\n";
         c3.putData();
         break;
